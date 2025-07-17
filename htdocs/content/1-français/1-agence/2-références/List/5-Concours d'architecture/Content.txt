@@ -1,0 +1,223 @@
+<style>
+  .entry {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 0.25rem;
+    color: var(--background-color);
+  }
+
+  .entry .year {
+    width: 60px;
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+
+  .entry .left {
+    flex: 1;
+    padding-right: 1rem;
+    text-align: left;
+  }
+
+  .entry .right {
+    font-style: italic;
+    max-width: 30%;
+    text-align: right;
+  }
+
+  .content_box h4 {
+    margin-top: 0;
+  }
+</style>
+
+<h4>PARTICIPATION AUX CONCOURS D'ARCHITECTURE NATIONAUX ET INTERNATIONAUX</h4>
+
+<div class="entry">
+  <div class="year">1984</div>
+  <div class="left">Ensemble de logements pour le Fond du Logement à Gasperich, Luxembourg</div>
+  <div class="right">1er prix, publication</div>
+</div>
+
+<div class="entry">
+  <div class="year">1986</div>
+  <div class="left">Nouveau théâtre national du Japon à Tokyo</div>
+  <div class="right">1er prix</div>
+</div>
+
+<div class="entry">
+  <div class="year">1986</div>
+  <div class="left">Extension et rénovation du Palais des Arts et de la Cour d'honneur à Düsseldorf, RFA</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1987</div>
+  <div class="left">Reconversion des Bains Municipaux à Esch-sur-Alzette, Luxembourg</div>
+  <div class="right">3e prix</div>
+</div>
+
+<div class="entry">
+  <div class="year">1987</div>
+  <div class="left">Prix européen de la reconstruction de la Ville à Bruxelles, Belgique</div>
+  <div class="right">1er prix, distinction</div>
+</div>
+
+<div class="entry">
+  <div class="year">1987</div>
+  <div class="left">Aménagement de la place de l'hôtel de ville et de la nouvelle place du marché à Dudelange, Luxembourg</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1987</div>
+  <div class="left">Deuxième biennale d'architecture de Cracovie - Thème : "Transformabilité de l'espace urbain" à Cracovie, Pologne</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1988</div>
+  <div class="left">Concours organisé par la firme "Eternit", Belgique</div>
+  <div class="right">sélection</div>
+</div>
+
+<div class="entry">
+  <div class="year">1988</div>
+  <div class="left">Place et monument en l'honneur de la Grande Duchesse Charlotte, Luxembourg</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1989</div>
+  <div class="left">Hall de sport à Mondorf-les-Bains, Luxembourg</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1989</div>
+  <div class="left">Aménagement du secteur de la place de l'Etoile, Luxembourg</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1990</div>
+  <div class="left">Concours pour le quartier d'habitation "Réimerwee" au Kirchberg, Luxembourg</div>
+  <div class="right">acquisition</div>
+</div>
+
+<div class="entry">
+  <div class="year">1991</div>
+  <div class="left">Centre intégré pour personnes âgées à Howald, Luxembourg</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1991</div>
+  <div class="left">Concours restreint pour le plan d'aménagement "Carmel" à Cents, Luxembourg (600 habitations)</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1992</div>
+  <div class="left">Concours pour le nouveau centre de Varsovie, Pologne</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1993</div>
+  <div class="left">Cinquième biennale d'architecture à Cracovie, Pologne</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1995</div>
+  <div class="left">Concours d'urbanisme à Saarlouis, Allemagne</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1996</div>
+  <div class="left">Concours d'urbanisme pour l'aménagement de l'entrée Nord de l'amphithéâtre romain à Trèves, Allemagne</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1998</div>
+  <div class="left">Prix Européen de la Reconstruction de la Ville à Bruxelles, Belgique</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1998</div>
+  <div class="left">Concours pour le nouveau siège de l'Institut Universitaire d'Architecture à Venise, Italie</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">1999</div>
+  <div class="left">Concours international d'architecture pour le "Centre de Congrès EUR" à Rome, Italie</div>
+  <div class="right">sélection pour la Biennale des jeunes artistes européens</div>
+</div>
+
+<div class="entry">
+  <div class="year">2000</div>
+  <div class="left">Concours international "Piazza Citadella" à Vérone, Italie</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">2000</div>
+  <div class="left">Concours international pour la "Galerie municipale d'Art moderne et contemporain" dans l'ancienne usine Birra Peroni à Rome, Italie</div>
+  <div class="right">publication</div>
+</div>
+
+<div class="entry">
+  <div class="year">2004</div>
+  <div class="left">Concours pour la construction du siège "ALIAI / OAI" - "Maison de l'architecture et de l'ingénierie" à Luxembourg</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">2005</div>
+  <div class="left">Concours pour le centre scolaire de Münsbach, Luxembourg</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">2006</div>
+  <div class="left">Concours pour la conception architecturale du "Muzeum Sztuki Nowoczesnej" - Musée d'Art Moderne à Varsovie, Pologne</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">2008</div>
+  <div class="left">Concours pour la conception architecturale du "Muzeum Sztuki Współczesnej" - Musée d'Art Contemporain à Wrocław, Pologne</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">2009</div>
+  <div class="left">Concours pour la conception architecturale du "Lubelskie Centrum Konferencyjne Urząd Marszałkowski" - Centre de conférences et de bureaux à Lublin, Pologne</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">2012</div>
+  <div class="left">Concours pour la conception architecturale de l'Ambassade de Pologne à Berlin, Allemagne</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">2013</div>
+  <div class="left">Concours d'idées pour le Centre Hospitalier Neuro-psychiatrique, entité "De Park" à Ettelbrück, Luxembourg</div>
+  <div class="right"></div>
+</div>
+
+<div class="entry">
+  <div class="year">2019</div>
+  <div class="left">Concours d’idées pour le "Muzem Powstanie Wielkopolskiego 1918-1919" - Musée de l’Insurrection de la région Grande-Pologne à Poznań, Pologne</div>
+  <div class="right"></div>
+</div>

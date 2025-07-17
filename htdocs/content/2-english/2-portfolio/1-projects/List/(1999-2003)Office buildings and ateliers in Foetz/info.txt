@@ -1,0 +1,15 @@
+<h3>Office buildings and ateliers in Foetz</h3>
+<h6>unrealised<br/></h6>
+<h5>1999-2003</h5>
+<h4>Foetz - Luxemburg</h4>
+<p>
+1st study:		Building B	1999-2001<br/>
+2nd study:		Building A	2001-2003<br/>
+3rd study:		Building C	1999-2001<br/>
+</p>
+
+<p>
+Building A	Above-ground floor area	3 750m<sup>2</sup>, below-ground floor area	4 160m<sup>2</sup><br/>
+Building B	Above-ground floor area	3 225m<sup>2</sup>, below-ground floor area	1 298m<sup>2</sup><br/>
+Building C	Above-ground floor area	5 491m<sup>2</sup>, below-ground floor area	1 223m<sup>2</sup><br/>
+</p>

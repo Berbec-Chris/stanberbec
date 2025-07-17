@@ -1,0 +1,735 @@
+body {
+	background: var(--background-color);
+	color: #fff;
+	font-family: Futura, Muli, 'Open Sans', sans-serif;
+    align-content: center;
+	margin:  0 auto;
+    padding: 0;
+    height: 850px;
+    width: 1200px; /* Match the width of .container */
+}
+
+a {
+	color: var(--text-grey);
+	text-decoration: none;
+}
+
+:root {
+    --background-color: rgb(58, 69,62);
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --text-color: rgb(207, 208, 206);
+    --link-color: #fff;
+    --container-bg-color: rgb(252, 0, 0);
+    --light-grey: rgb(175, 175, 175);
+    --dark-grey: rgb(134, 134, 134);
+    --blue-hue: rgba(145, 171, 180);
+}
+
+main {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Muli', sans-serif;
+    font-weight: lighter;
+    color: var(--text-color);
+    margin: 0 0 1rem;
+}
+
+p {
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--light-grey);
+    margin: 0 0 1rem;
+}
+
+p a {
+    font-family: 'Muli', sans-serif;
+    color: var(--link-color);
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+span {
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--light-grey);
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('../assets/fonts/Futura\ Light\ font.ttf') format('truetype');
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../assets/fonts/Muli.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#page {
+	padding: 0;
+}
+
+.container{
+    width: min(1200px, var(--init-vw));
+    height: min(800px, var(--init-vh));
+
+    position: relative;
+    /*background-color: var(--dark-grey);*/
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2%;
+    display: flex;
+}
+
+.content_box {
+    width: calc(2 * (100% / 3));
+    position: relative;
+    background-color: var(--light-grey);
+    animation: slide-in-content 500ms ease-out forwards;
+    overflow: hidden;
+    overflow-y: auto; /* Add scrollable behavior */
+    height: 100%; /* Ensure it doesn't exceed the viewport height */
+}
+.content_box a, .content_box p, .content_box h4 {
+    color: var(--background-color);
+}
+
+/* Global custom scrollbar styles */
+*::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background: var(--dark-grey);
+    border-radius: 0px;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--background-color);
+}
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+*::-webkit-scrollbar-button {
+    display: none;
+}
+
+#freewall {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(7, 1fr);   /* 7 rows */
+    pointer-events: none;
+    /* Remove any transform/slide-in animation */
+    /* Only use opacity for transitions */
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    pointer-events: none;
+    transition: opacity 0.5s;
+    opacity: 0;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    filter: grayscale(100%);
+    pointer-events: none;
+}
+
+#underlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 0;
+    overflow: hidden;
+    z-index: -1; /* Ensure it is underneath */
+    pointer-events: none;
+}
+
+.underlayer-cell {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+    /* background-color is set dynamically in JS */
+}
+
+#blue_hue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 1; /* On top of freewall/underlayer, but under content if needed */
+    pointer-events: none; /* Makes sure it doesn’t block clicks */
+    background-color: var(--blue-hue) ;
+    opacity: 0.3;
+    transition: background-color 0.3s ease;
+}
+
+#blue_hue.active {
+    background-color: var(--light-grey);
+    opacity: 1;
+}
+
+.test {
+    margin: 2rem;
+    height: calc(100% - 4rem);
+    width: calc(100% - 4rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    z-index: 2; /* On top of freewall/underlayer, but under content if needed */
+}
+.test h3 {
+    margin: 1rem 0 .5rem;
+    font-size: 14px;
+}
+
+.test iframe {
+    width: 100%;
+    height: 75%;
+    border: none;
+}
+
+.nav_menu{
+    width: calc(100% / 3);
+    height: 100%;
+    position: relative;
+}
+
+.nav_list-overflow {
+    width: 100%;
+    height: calc(2 * (100% / 3));
+    overflow: hidden;
+}
+.nav_list-container {
+    height: 100%;
+    justify-items: center;
+    align-content: center;
+    z-index: 1;
+    animation-name: slide-in-nav-list;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+.nav_list {
+    width: fit-content;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    animation-name: nav-list-gap-in;
+    animation-duration: 500ms;
+}
+
+
+@keyframes nav-list-gap-in {
+    from {
+        transform: translateY(100%);
+        gap: 10rem;
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        gap: 3rem;
+        opacity: 1;
+    }
+}
+
+
+@keyframes nav-list-gap-out {
+    from {
+        transform: translateY(0);
+        gap: 3rem;
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        gap: 10rem;
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in-nav-list {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+        display: none;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        display: block;
+    }
+}
+
+@keyframes slide-out-nav-list {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+/* Fix the initial spawn position and direction for projects_list animation */
+.project_overlay {
+    position: absolute;
+    top: 0; /* Start at the top of nav_menu */
+    left: 0;
+    width: 100%;
+    height: calc( 2* (100% / 3 ));
+    z-index: 10; /* Increase z-index to ensure overlay is above nav_list-container */
+    pointer-events: none;
+    overflow: auto;
+}
+
+.project_overlay.active {
+    pointer-events: auto;
+    transform: translateY(0); /* Slide up into position */
+    opacity: 1;
+    animation: slide-in-projects-list 0.5s forwards;
+    z-index: 10; /* Ensure active overlay is always on top */
+}
+
+.project_overlay.hidden {
+    animation: slide-out-projects-list 0.5s forwards;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 10;
+}
+
+/* Add animations for projects_list */
+@keyframes slide-in-projects-list {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+        gap: 10rem;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        gap: 3rem;
+    }
+}
+
+@keyframes slide-out-projects-list {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+        gap: 3rem;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+        gap: 10rem;
+    }
+}
+
+.project_list {
+    font-size: 12px;
+    width: calc( 100% - 2rem );
+    height: calc( 2* (100% / 3 ));
+    gap: 0;
+    margin: 1.5rem 1.5rem; /* Add margin inside the box */
+}
+.project_list a {
+    color: var(--light-grey);
+    font-family: 'Muli', sans-serif;
+}
+.project_list a.selected {
+    color: var(--white-color);
+    font-weight: bold;
+}
+.project_list li {
+    margin: .25rem;
+}
+
+.project_overlay ol {
+    display: block;
+    list-style-type: none;
+    margin: 1rem 1rem;
+    padding: 0;
+}
+
+.project-docs-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.project-docs-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+}
+
+.project-docs-images.swiper {
+    flex: 2 1 0;
+    min-height: 0;
+    width: 100%;
+    height: 67%;
+    overflow: hidden;
+}
+
+.project-docs-images .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.project-docs-images .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+.project-docs-lower {
+    flex: 1 1 0;
+    display: flex;
+    min-height: 0;
+    width: 100%;
+}
+
+.project-docs-pagination {
+    flex: 0 0 33%;
+    max-width: 20%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-width: 60px;
+    min-height: 60px;
+    padding: 1rem 0 1rem 0;
+    overflow: auto;
+}
+
+.swiper-pagination-bullet {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 4px !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border: 2px solid transparent;
+    margin: 0 4px 8px 0;
+    transition: border 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    opacity: 0.7;
+    align-items: center;
+}
+
+.swiper-pagination-bullet-active {
+    border: 2px solid var(--background-color);
+    opacity: 1;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.project-docs-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: 33%;
+}
+
+.project-docs-txtcontent {
+    width: 80%;
+    overflow: auto;
+    margin: 1rem 1rem 1rem 1rem;
+    color: var(--background-color);
+}
+
+.project-docs-text h3, 
+.project-docs-text h4, 
+.project-docs-text h5, 
+.project-docs-text h6, 
+.project-docs-text p {
+    color: var(--background-color);
+    margin: 0;
+    font-weight: lighter;
+}
+
+.project-docs-text h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.project-docs-text h4 {
+    text-transform: uppercase;
+}
+
+.project-docs-text h5 {
+    margin: 1rem 0 0 0;
+}
+
+.project-docs-text p {
+    margin: 0 0 0.5rem 0;
+}
+.nav_button {
+    background-image: url("../assets/img/link-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: inherit;
+    justify-items: center;
+    overflow: hidden;
+}
+
+.nav_button:active {
+    scale: 0.8;
+    transition: scale 0.1s ease-in-out;
+}
+
+.nav_button.leaf-active {
+    transform: scale(1.3);
+    transition: transform 0.1s ease;
+  }
+
+.nav_button p {
+
+    height: 39px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    z-index: 1;
+    margin: 0;
+    align-content: center;
+    transform: translate(-4px, 4px);
+}
+
+.nav_logo-container {
+    height: calc(100% / 3);
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Push elements to top and bottom */
+    align-items: center; /* Center horizontally */
+    z-index: 2;
+   /* animation-name: intro-logo;
+    animation-duration: 1000ms;
+    animation-fill-mode: ease-in-out forwards;*/
+}
+
+@keyframes intro-logo {
+    from {
+        transform: translateY(100%);
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateY(0);
+        transform: translateX(0);
+    }
+}
+
+.icon {
+    scale: 0.75;
+    justify-self: center;
+    animation-name: fade-in;
+    animation-duration: 3000ms;
+    animation-fill-mode: ease-in forwards;
+}
+
+.name, .name2 {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+}
+
+.name h4 {
+    opacity: 0;
+}
+
+.name2 p {
+    font-size: 10px;
+    opacity: 0;
+}
+
+
+.nav_bottom-menu {
+    position: relative;
+    width: min(1200px, var(--init-vw));
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: 'Futura-light', sans-serif;
+    text-transform: uppercase;
+}
+
+.nav_backhome-container {
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+.nav_backhome-container a {
+    cursor: pointer;
+    margin-inline: 1rem;
+}
+
+.nav_lang-container {
+    width: 63px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    text-transform: lowercase;
+}
+
+.nav_lang-container p, .nav_lang-container a{
+    color: var(--dark-grey);
+}
+address {
+	font-style: normal;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 1px;
+	width: 100%;
+}
+
+.linki {
+	margin: 0 auto;
+	width: 100%
+}
+
+.linki a {
+	display: block;
+	width: 119px;
+	background: url(/assets/img/linki-bg.jpg) no-repeat top center;
+	padding: 12px 6px 6px;
+	margin: 0 auto 36px;
+	text-align: center;
+	font-size: 12px;
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fade-in 0.5s forwards; /* Fade-in over 0.5s */
+}
+
+.fade-out {
+    animation: fade-out 0.5s backwards; /* Fade-out over 0.5s */
+}
+
+@keyframes slide-in-content {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out-content {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+/*
+@media (min-width: 800px) {
+	#page {
+		width: 800px;
+		margin: 120px auto 86px;
+		}
+	#logo {
+		margin: 120px auto 125px;
+	}
+	address {
+		margin: 0 auto 103px;
+	}
+}
+
+@media (max-width: 799px) {
+	#page {
+		width: 90%;
+		margin: 60px auto 50px;
+		}
+	#logo {
+		margin: 80px auto 80px;
+	}
+	address {
+		margin: 0 auto 70px;
+	}
+}*/
+
+/*LIST BOX OVERLAY SUBMENU*/
+
+.expo-overlay-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 0 40px #000;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+}
+
+

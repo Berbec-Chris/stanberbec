@@ -1,0 +1,135 @@
+<style>
+.test {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  color: var(--background-color);
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.top-half {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+.left {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.left img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.right {
+  width: 52%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1.5rem 0 0.5rem;
+}
+.right h2 {
+  margin: 1rem 0 0 0;
+  text-transform: uppercase;
+  color: var(--background-color);
+}
+.bottom-half {
+  width: 100%;
+  height: 50%;
+  padding: 50px 140px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bottom-half h2{
+  margin: 1rem 0 1rem 0;
+  text-transform: uppercase;
+  color: var(--background-color);
+}
+.bottom-half .year {
+  width: 300px;
+  flex-shrink: 0;
+  margin-right: 2rem;
+  color: var(--background-color);
+}
+.entry {
+  display: flex;
+  margin-bottom: 6px;
+  font-size: 0.9em;
+}
+.year {
+  width: 60px;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  color: var(--background-color);
+}
+.description {
+  flex: 1;
+}
+.test {
+  margin: 0;
+}
+</style>
+
+<div class="test">
+  <div class="top-half">
+    <div class="left">
+      <img src="/assets/img/stan.jpg" alt="Stanislaw Berbec'" />
+    </div>
+    <div class="right">
+      <h2>Stanislaw Berbec'</h2>
+	<h4>Né en Pologne le 15 mars 1954</h4>
+      <div class="entry">
+        <div class="year">1975–77</div>
+        <div class="description">Ecole polytechnique de génie civil à Lublin – Pologne</div>
+      </div>
+      <div class="entry">
+        <div class="year">1977–81</div>
+        <div class="description">Faculté d’architecture à l’Ecole polytechnique de Varsovie – Pologne</div>
+      </div>
+      <div class="entry">
+        <div class="year">1982–84</div>
+        <div class="description">Institut supérieur d’architecture Saint-Luc à Liège – Belgique<br/>Obtention du diplôme</div>
+      </div>
+   <div class="entry">
+      <div class="year">1984</div>
+      <div class="description">Création de Bretz-Berbec’ Agence d'architecture à Luxembourg</div>
+    </div>
+    <div class="entry">
+      <div class="year">1987</div>
+      <div class="description">1er prix à la biennale d'architecture de Cracovie – "Transformabilité de l'espace urbain"</div>
+    </div>
+    <div class="entry">
+      <div class="year">1988</div>
+      <div class="description">Création de Stanislaw Berbec Agence d’architecture à Luxembourg</div>
+    </div>
+    <div class="entry">
+      <div class="year">1995</div>
+      <div class="description">1er prix au Prix luxembourgeois d’architecture – catégorie "théorie d’architecture"</div>
+    </div>
+    <div class="entry">
+      <div class="year">2005</div>
+      <div class="description">Lauréat – Concours pour la rénovation de l'Administration communale de Tuntange</div>
+    </div>
+    </div>
+  </div>
+  <div class="bottom-half">
+<h2 style="transform:uppercase;">L'équipe</h2>
+    <div class="entry"><div class="year">Architecte</div><div class="description">Stanislaw Berbec'</div></div>
+    <div class="entry"><div class="year">Architecte</div><div class="description">Anne-Lise Horman</div></div>
+    <div class="entry"><div class="year">Maquettiste</div><div class="description">Mirosław Miruc'</div></div>
+    <div class="entry"><div class="year">Dessinateur/Web Developer</div><div class="description">Christophe Berbec'</div></div>
+    <div class="entry"><div class="year">Architecte (images de synthèse)</div><div class="description">Artur Stachura</div></div>
+    <div class="entry"><div class="year">Architecte (images de synthèse)</div><div class="description">Andrzej Kloc</div></div>
+    <div class="entry"><div class="year">Scénographe</div><div class="description">Cécile Mormont</div></div>
+  </div>
+</div>

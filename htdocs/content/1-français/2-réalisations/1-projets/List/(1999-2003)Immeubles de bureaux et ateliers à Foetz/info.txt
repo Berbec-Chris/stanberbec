@@ -1,0 +1,15 @@
+<h3>Immeubles de bureaux et ateliers à Foetz</h3>
+<h6>non réalisé<br/></h6>
+<h5>1999-2003</h5>
+<h4>Foetz - Luxembourg</h4>
+<p>
+1ère étude: 	bâtiment B	1999-2001<br/>
+2ème étude: 	bâtiment A	2001-2003<br/>
+3ème étude: 	bâtiment C	1999-2001<br/>
+</p>
+
+<p>
+Bâtiment A	surface hors-sol	3 750m<sup>2</sup>, surface sous-sol	4 160m<sup>2</sup><br/>
+Bâtiment B	surface hors-sol	3 225m<sup>2</sup>, surface sous-sol	1 298m<sup>2</sup><br/>
+Bâtiment C	surface hors-sol	5 491m<sup>2</sup>, surface sous-sol	1 223m<sup>2</sup><br/>
+</p>
